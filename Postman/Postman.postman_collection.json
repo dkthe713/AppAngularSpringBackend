@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "9afe713d-35c0-4be0-8c7f-27e8dc5f41d2",
+		"name": "Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/saveOrUpdate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idusers\":null,\n\t\"primerNombre\": \"Wilson\",\n\t\"segundoNombre\": \"Vladimir\",\n\t\"primerApellido\": \"España\",\n\t\"segundoApellido\": \"Champutiz\",\n\t\"telefono\": \"0982870538\",\n\t\"direccion\": \"Quito, Bartolome de las Casas y Diego Martin de Utreras\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/saveOrUpdate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"saveOrUpdate"
+					]
+				},
+				"description": "Guardar Usuarios"
+			},
+			"response": []
+		}
+	]
+}
