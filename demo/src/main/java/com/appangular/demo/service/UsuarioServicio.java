@@ -28,4 +28,11 @@ public interface UsuarioServicio {
 	 */
 	List<Usuario> findAll();
 
+	/**
+	 * Eliminar usuario by id
+	 * 
+	 * @param idusers
+	 */
+	void eliminarUsuario(Long idusers);
+
 }

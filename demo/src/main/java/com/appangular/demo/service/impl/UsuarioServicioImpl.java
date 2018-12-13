@@ -42,4 +42,14 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 	public List<Usuario> findAll() {
 		return repositorioUsuario.findAll();
 	}
+
+	/**
+	 * Eliminar usuario by id
+	 * 
+	 * @param idusers
+	 */
+	@Override
+	public void eliminarUsuario(Long idusers) {
+		repositorioUsuario.deleteById(idusers);
+	}
 }
