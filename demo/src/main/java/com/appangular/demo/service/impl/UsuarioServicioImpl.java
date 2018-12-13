@@ -3,6 +3,8 @@
  */
 package com.appangular.demo.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +31,15 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 	@Override
 	public Usuario save(Usuario usuario) {
 		return repositorioUsuario.save(usuario);
+	}
+
+	/**
+	 * Buscar usuarios
+	 * 
+	 * @return
+	 */
+	@Override
+	public List<Usuario> findAll() {
+		return repositorioUsuario.findAll();
 	}
 }

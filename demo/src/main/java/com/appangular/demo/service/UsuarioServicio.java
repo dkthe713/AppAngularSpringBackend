@@ -3,6 +3,8 @@
  */
 package com.appangular.demo.service;
 
+import java.util.List;
+
 import com.appangular.demo.modelo.Usuario;
 
 /**
@@ -18,5 +20,12 @@ public interface UsuarioServicio {
 	 * @return
 	 */
 	Usuario save(Usuario usuario);
+
+	/**
+	 * Buscar usuarios
+	 * 
+	 * @return
+	 */
+	List<Usuario> findAll();
 
 }

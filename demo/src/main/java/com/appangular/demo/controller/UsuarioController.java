@@ -4,6 +4,7 @@
 package com.appangular.demo.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,12 @@ public class UsuarioController {
 		return new RespuestaRest(HttpStatus.OK.value(), "Transaccion exitosa");
 	}
 
+	@RequestMapping(value = "/getUsuarios", method = RequestMethod.GET)
+	public List<Usuario> getUsuarios() {
+		
+		return usuarioServicio.findAll();		
+	}
+	
 	private boolean validarCamposUsuario(Usuario user) {
 		boolean esValido = true;
 		if (StringUtils.trimToNull(user.getPrimerNombre()) == null) {
