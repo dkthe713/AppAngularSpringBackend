@@ -5,6 +5,7 @@ package com.appangular.demo.controller;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -55,13 +56,13 @@ public class UsuarioController {
 
 	private boolean validarCamposUsuario(Usuario user) {
 		boolean esValido = true;
-		if (user.getPrimerNombre() == null) {
+		if (StringUtils.trimToNull(user.getPrimerNombre()) == null) {
 			esValido = false;
 		}
-		if (user.getPrimerApellido() == null) {
+		if (StringUtils.trimToNull(user.getPrimerApellido()) == null) {
 			esValido = false;
 		}
-		if (user.getDireccion() == null) {
+		if (StringUtils.trimToNull(user.getDireccion()) == null) {
 			esValido = false;
 		}
 		return esValido;
